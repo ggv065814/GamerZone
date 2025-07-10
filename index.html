@@ -1,73 +1,216 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GamerZone - متجر أجهزة بلايستيشن</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerZone - متجر إلكتروني عالمي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="logo">GamerZone</div>
-    <nav>
-      <a href="#devices">الأجهزة</a>
-      <a href="#accessories">الملحقات</a>
-      <a href="#cards">بطاقات</a>
-      <a href="#offers">العروض</a>
-      <a href="#contact">تواصل</a>
-      <div class="cart-icon" id="cartIcon">
-        <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M7 20a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM7.16 18h9.68c.8 0 1.51-.48 1.82-1.21l3.24-7.05A1 1 0 0 0 21 8H6.21l-.94-2.36A2 2 0 0 0 3.42 4H1v2h2.42l3.6 9.59-1.35 2.44A2 2 0 0 0 7 20h12v-2H7.42l1.1-2h8.45a1 1 0 0 0 .92-.62l2.93-6.38-1.8-.82-2.93 6.38H7.16z"/></svg>
-        <span class="cart-count" id="cartCount">0</span>
-      </div>
-    </nav>
-  </header>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>أقوى متجر بلايستيشن في الخليج</h1>
-      <p>أحدث الأجهزة، أفضل الملحقات، بطاقات أصلية، عروض حصرية!</p>
-      <a href="#devices" class="hero-btn">تسوق الآن</a>
+    <!-- شريط التنقل المحسن -->
+    <header>
+        <div class="container">
+            <div class="header-flex">
+                <div class="logo-section">
+                    <h1><i class="fas fa-gamepad"></i> GamerZone</h1>
+                    <p class="tagline">متجر إلكتروني عالمي</p>
+                </div>
+                <nav>
+                    <a href="#home"><i class="fas fa-home"></i> الرئيسية</a>
+                    <a href="#phones"><i class="fas fa-mobile-alt"></i> الهواتف</a>
+                    <a href="#laptops"><i class="fas fa-laptop"></i> اللابتوبات</a>
+                    <a href="#gaming"><i class="fas fa-gamepad"></i> الألعاب</a>
+                    <a href="#about"><i class="fas fa-info-circle"></i> من نحن</a>
+                    <a href="#contact"><i class="fas fa-envelope"></i> اتصل بنا</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+                        <button id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="user-menu">
+                        <button class="user-btn"><i class="fas fa-user"></i></button>
+                        <div class="user-dropdown">
+                            <a href="#"><i class="fas fa-user-circle"></i> تسجيل الدخول</a>
+                            <a href="#"><i class="fas fa-heart"></i> المفضلة</a>
+                            <a href="#"><i class="fas fa-history"></i> سجل الطلبات</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- شريط الإحصائيات -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number" data-target="15420">0</span>
+                    <span class="stat-label">عميل سعيد</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span class="stat-number" data-target="8920">0</span>
+                    <span class="stat-label">طلب منجز</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-number" data-target="4.8">0</span>
+                    <span class="stat-label">تقييم متوسط</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="stat-number" data-target="24">0</span>
+                    <span class="stat-label">ساعة دعم</span>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-  <main>
-    <!-- قسم الهواتف الذكية -->
-    <section id="phones" class="products-section">
-      <h2>الهواتف الذكية</h2>
-      <div class="products-grid">
-        <div class="product-card">
-          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-1-202209?wid=512&hei=512&fmt=jpeg&qlt=95&.v=1660753619946" alt="iPhone 14 Pro">
-          <h3>iPhone 14 Pro</h3>
-          <ul class="features">
-            <li>شاشة Super Retina XDR</li>
-            <li>معالج A16 Bionic</li>
-            <li>كاميرا ثلاثية 48MP</li>
-          </ul>
-          <div class="price">$1099</div>
-          <button class="add-to-cart" data-name="iPhone 14 Pro" data-price="1099" data-img="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-1-202209?wid=512&hei=512&fmt=jpeg&qlt=95&.v=1660753619946">أضف إلى السلة</button>
+
+    <!-- القسم الرئيسي المحسن -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>اكتشف عالم التقنية</h2>
+                <p>أفضل الأجهزة الإلكترونية والألعاب بأفضل الأسعار</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('products')">
+                        <i class="fas fa-shopping-bag"></i> تسوق الآن
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('offers')">
+                        <i class="fas fa-tags"></i> العروض الحالية
+                    </button>
+                </div>
+            </div>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>شحن مجاني</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>ضمان أصالة</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-undo"></i>
+                    <span>إرجاع مجاني</span>
+                </div>
+            </div>
         </div>
-        <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=512&q=80" alt="Samsung Galaxy S23 Ultra">
-          <h3>Samsung Galaxy S23 Ultra</h3>
-          <ul class="features">
-            <li>شاشة Dynamic AMOLED 2X</li>
-            <li>كاميرا 200MP</li>
-            <li>بطارية 5000mAh</li>
-          </ul>
-          <div class="price">$1199</div>
-          <button class="add-to-cart" data-name="Samsung Galaxy S23 Ultra" data-price="1199" data-img="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=512&q=80">أضف إلى السلة</button>
+    </section>
+
+    <!-- شريط الفلترة والترتيب -->
+    <div class="filter-bar">
+        <div class="container">
+            <div class="filter-controls">
+                <select id="categoryFilter" onchange="filterProducts()">
+                    <option value="">جميع الفئات</option>
+                    <option value="phones">الهواتف الذكية</option>
+                    <option value="laptops">اللابتوبات</option>
+                    <option value="headphones">السماعات</option>
+                    <option value="watches">الساعات الذكية</option>
+                    <option value="accessories">الملحقات</option>
+                    <option value="gaming">أجهزة الألعاب</option>
+                    <option value="monitors">الشاشات</option>
+                    <option value="cameras">الكاميرات</option>
+                </select>
+                <select id="priceFilter" onchange="filterProducts()">
+                    <option value="">جميع الأسعار</option>
+                    <option value="0-100">أقل من 100$</option>
+                    <option value="100-500">100$ - 500$</option>
+                    <option value="500-1000">500$ - 1000$</option>
+                    <option value="1000+">أكثر من 1000$</option>
+                </select>
+                <select id="sortFilter" onchange="sortProducts()">
+                    <option value="">ترتيب حسب</option>
+                    <option value="price-low">السعر: من الأقل للأعلى</option>
+                    <option value="price-high">السعر: من الأعلى للأقل</option>
+                    <option value="name">الاسم: أ-ي</option>
+                    <option value="popularity">الأكثر شعبية</option>
+                </select>
+            </div>
+            <div class="view-controls">
+                <button class="view-btn active" onclick="changeView('grid')">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn" onclick="changeView('list')">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
         </div>
-        <div class="product-card">
-          <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=512&q=80" alt="Xiaomi 13 Pro">
-          <h3>Xiaomi 13 Pro</h3>
-          <ul class="features">
-            <li>شاشة LTPO AMOLED</li>
-            <li>كاميرا Leica 50MP</li>
-            <li>شحن سريع 120W</li>
-          </ul>
-          <div class="price">$899</div>
-          <button class="add-to-cart" data-name="Xiaomi 13 Pro" data-price="899" data-img="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=512&q=80">أضف إلى السلة</button>
+    </div>
+
+    <!-- قسم العروض الخاصة -->
+    <section id="offers" class="offers-section">
+        <div class="container">
+            <h2><i class="fas fa-fire"></i> العروض الحالية</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-badge">خصم 20%</div>
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=512&q=80" alt="باقة اللاعب الذهبي">
+                    <h3>باقة اللاعب الذهبي</h3>
+                    <p>PS5 + يد تحكم إضافية + بطاقة 50$</p>
+                    <div class="offer-price">$599 <span class="old-price">$618</span></div>
+                    <button class="add-to-cart" data-name="باقة اللاعب الذهبي" data-price="599" data-img="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=512&q=80">أضف إلى السلة</button>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-badge">خصم 15%</div>
+                    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=512&q=80" alt="باقة العمل الذهبية">
+                    <h3>باقة العمل الذهبية</h3>
+                    <p>لابتوب + سماعات + ماوس لاسلكي</p>
+                    <div class="offer-price">$1899 <span class="old-price">$2234</span></div>
+                    <button class="add-to-cart" data-name="باقة العمل الذهبية" data-price="1899" data-img="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=512&q=80">أضف إلى السلة</button>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- قسم المنتجات المحسن -->
+    <section id="products" class="products-section">
+        <h2><i class="fas fa-mobile-alt"></i> الهواتف الذكية</h2>
+        <div class="products-grid" id="phones">
+            <div class="product-card">
+                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-1-202209?wid=512&hei=512&fmt=jpeg&qlt=95&.v=1660753619946" alt="iPhone 14 Pro">
+                <h3>iPhone 14 Pro</h3>
+                <ul class="features">
+                    <li>شاشة Super Retina XDR</li>
+                    <li>معالج A16 Bionic</li>
+                    <li>كاميرا ثلاثية 48MP</li>
+                </ul>
+                <div class="price">$1099</div>
+                <button class="add-to-cart" data-name="iPhone 14 Pro" data-price="1099" data-img="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-model-unselect-gallery-1-202209?wid=512&hei=512&fmt=jpeg&qlt=95&.v=1660753619946">أضف إلى السلة</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=512&q=80" alt="Samsung Galaxy S23 Ultra">
+                <h3>Samsung Galaxy S23 Ultra</h3>
+                <ul class="features">
+                    <li>شاشة Dynamic AMOLED 2X</li>
+                    <li>كاميرا 200MP</li>
+                    <li>بطارية 5000mAh</li>
+                </ul>
+                <div class="price">$1199</div>
+                <button class="add-to-cart" data-name="Samsung Galaxy S23 Ultra" data-price="1199" data-img="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=512&q=80">أضف إلى السلة</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=512&q=80" alt="Xiaomi 13 Pro">
+                <h3>Xiaomi 13 Pro</h3>
+                <ul class="features">
+                    <li>شاشة LTPO AMOLED</li>
+                    <li>كاميرا Leica 50MP</li>
+                    <li>شحن سريع 120W</li>
+                </ul>
+                <div class="price">$899</div>
+                <button class="add-to-cart" data-name="Xiaomi 13 Pro" data-price="899" data-img="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=512&q=80">أضف إلى السلة</button>
+            </div>
+        </div>
     </section>
     <!-- قسم اللابتوبات -->
     <section id="laptops" class="products-section">
@@ -365,18 +508,6 @@
           </ul>
           <div class="price">$100</div>
           <button class="add-to-cart" data-name="بطاقة ستور 100$" data-price="100" data-img="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=512&q=80">أضف إلى السلة</button>
-        </div>
-      </div>
-    </section>
-    <!-- عروض خاصة -->
-    <section id="offers" class="products-section">
-      <h2>عروض خاصة</h2>
-      <div class="offers-grid">
-        <div class="offer-card">
-          <h3>باقة اللاعب الذهبي</h3>
-          <p>PS5 + يد تحكم إضافية + بطاقة 50$</p>
-          <div class="offer-price">$599 <span class="old-price">$618</span></div>
-          <button class="add-to-cart" data-name="باقة اللاعب الذهبي" data-price="599" data-img="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=512&q=80">أضف إلى السلة</button>
         </div>
       </div>
     </section>
