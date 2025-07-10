@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GamerZone - متجر أجهزة بلايستيشن</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">GamerZone</div>
+    <nav>
+      <a href="#devices">الأجهزة</a>
+      <a href="#accessories">الملحقات</a>
+      <a href="#cards">بطاقات</a>
+      <a href="#offers">العروض</a>
+      <a href="#contact">تواصل</a>
+      <div class="cart-icon" id="cartIcon">
+        <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M7 20a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM7.16 18h9.68c.8 0 1.51-.48 1.82-1.21l3.24-7.05A1 1 0 0 0 21 8H6.21l-.94-2.36A2 2 0 0 0 3.42 4H1v2h2.42l3.6 9.59-1.35 2.44A2 2 0 0 0 7 20h12v-2H7.42l1.1-2h8.45a1 1 0 0 0 .92-.62l2.93-6.38-1.8-.82-2.93 6.38H7.16z"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>أقوى متجر بلايستيشن في الخليج</h1>
+      <p>أحدث الأجهزة، أفضل الملحقات، بطاقات أصلية، عروض حصرية!</p>
+      <a href="#devices" class="hero-btn">تسوق الآن</a>
+    </div>
+  </section>
+  <main>
+    <!-- أجهزة بلايستيشن -->
+    <section id="devices" class="products-section">
+      <h2>أجهزة بلايستيشن</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/PS5_console_and_controller.png" alt="PlayStation 5">
+          <h3>PlayStation 5</h3>
+          <ul class="features">
+            <li>معالج AMD Ryzen</li>
+            <li>دعم 4K</li>
+            <li>مساحة 1TB</li>
+          </ul>
+          <div class="price">$499</div>
+          <button class="add-to-cart" data-name="PlayStation 5" data-price="499" data-img="https://upload.wikimedia.org/wikipedia/commons/0/03/PS5_console_and_controller.png">أضف إلى السلة</button>
+        </div>
+        <div class="product-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/PlayStation_5_Digital_Edition_and_DualSense.png" alt="PlayStation 5 Digital">
+          <h3>PlayStation 5 Digital</h3>
+          <ul class="features">
+            <li>بدون قارئ أقراص</li>
+            <li>دعم 4K</li>
+            <li>مساحة 1TB</li>
+          </ul>
+          <div class="price">$449</div>
+          <button class="add-to-cart" data-name="PlayStation 5 Digital" data-price="449" data-img="https://upload.wikimedia.org/wikipedia/commons/8/8a/PlayStation_5_Digital_Edition_and_DualSense.png">أضف إلى السلة</button>
+        </div>
+        <div class="product-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/PS4_Pro_and_DualShock_4.png" alt="PlayStation 4 Pro">
+          <h3>PlayStation 4 Pro</h3>
+          <ul class="features">
+            <li>دعم 4K</li>
+            <li>مساحة 1TB</li>
+            <li>مستعمل بحالة ممتازة</li>
+          </ul>
+          <div class="price">$399</div>
+          <button class="add-to-cart" data-name="PlayStation 4 Pro" data-price="399" data-img="https://upload.wikimedia.org/wikipedia/commons/3/3e/PS4_Pro_and_DualShock_4.png">أضف إلى السلة</button>
+        </div>
+      </div>
+    </section>
+    <!-- ملحقات أصلية -->
+    <section id="accessories" class="products-section">
+      <h2>ملحقات أصلية</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/DualSense_with_background.png" alt="يد تحكم DualSense">
+          <h3>يد تحكم DualSense</h3>
+          <ul class="features">
+            <li>اهتزاز ديناميكي</li>
+            <li>دعم اللمس</li>
+            <li>بطارية تدوم طويلاً</li>
+          </ul>
+          <div class="price">$69</div>
+          <button class="add-to-cart" data-name="يد تحكم DualSense" data-price="69" data-img="https://upload.wikimedia.org/wikipedia/commons/4/4e/DualSense_with_background.png">أضف إلى السلة</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/hardware/ps5-accessories-charging-station.png" alt="قاعدة شحن DualSense">
+          <h3>قاعدة شحن DualSense</h3>
+          <ul class="features">
+            <li>شحن جهازين معًا</li>
+            <li>تصميم أنيق</li>
+            <li>شحن سريع</li>
+          </ul>
+          <div class="price">$29</div>
+          <button class="add-to-cart" data-name="قاعدة شحن DualSense" data-price="29" data-img="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/hardware/ps5-accessories-charging-station.png">أضف إلى السلة</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/hardware/ps5-accessories-pulse-3d-headset.png" alt="سماعة Pulse 3D">
+          <h3>سماعة Pulse 3D</h3>
+          <ul class="features">
+            <li>صوت ثلاثي الأبعاد</li>
+            <li>ميكروفون مزدوج</li>
+            <li>راحة فائقة</li>
+          </ul>
+          <div class="price">$99</div>
+          <button class="add-to-cart" data-name="سماعة Pulse 3D" data-price="99" data-img="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/hardware/ps5-accessories-pulse-3d-headset.png">أضف إلى السلة</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/hardware/psvr2-gallery-image-01-en-15feb23.png" alt="PlayStation VR2">
+          <h3>PlayStation VR2</h3>
+          <ul class="features">
+            <li>تجربة واقع افتراضي مذهلة</li>
+            <li>دقة 4K HDR</li>
+            <li>راحة في الارتداء</li>
+          </ul>
+          <div class="price">$549</div>
+          <button class="add-to-cart" data-name="PlayStation VR2" data-price="549" data-img="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/hardware/psvr2-gallery-image-01-en-15feb23.png">أضف إلى السلة</button>
+        </div>
+      </div>
+    </section>
+    <!-- بطاقات ستور -->
+    <section id="cards" class="products-section">
+      <h2>بطاقات ستور</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/store/ps-store-gift-card.png" alt="بطاقة ستور 50 دولار">
+          <h3>بطاقة ستور 50$</h3>
+          <ul class="features">
+            <li>شحن مباشر لحسابك</li>
+            <li>صالح لجميع الحسابات الأمريكية</li>
+          </ul>
+          <div class="price">$50</div>
+          <button class="add-to-cart" data-name="بطاقة ستور 50$" data-price="50" data-img="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/store/ps-store-gift-card.png">أضف إلى السلة</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/store/ps-store-gift-card.png" alt="بطاقة ستور 100 دولار">
+          <h3>بطاقة ستور 100$</h3>
+          <ul class="features">
+            <li>شحن مباشر لحسابك</li>
+            <li>صالح لجميع الحسابات الأمريكية</li>
+          </ul>
+          <div class="price">$100</div>
+          <button class="add-to-cart" data-name="بطاقة ستور 100$" data-price="100" data-img="https://www.playstation.com/etc.clientlibs/global_pdc/clientlibs/clientlib-site/resources/img/store/ps-store-gift-card.png">أضف إلى السلة</button>
+        </div>
+      </div>
+    </section>
+    <!-- عروض خاصة -->
+    <section id="offers" class="products-section">
+      <h2>عروض خاصة</h2>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <h3>باقة اللاعب الذهبي</h3>
+          <p>PS5 + يد تحكم إضافية + بطاقة 50$</p>
+          <div class="offer-price">$599 <span class="old-price">$618</span></div>
+          <button class="add-to-cart" data-name="باقة اللاعب الذهبي" data-price="599" data-img="https://upload.wikimedia.org/wikipedia/commons/0/03/PS5_console_and_controller.png">أضف إلى السلة</button>
+        </div>
+      </div>
+    </section>
+    <!-- تواصل معنا -->
+    <section id="contact" class="contact-section">
+      <h2>تواصل معنا</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="اسمك" required>
+        <input type="email" placeholder="بريدك الإلكتروني" required>
+        <textarea placeholder="رسالتك" required></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
+  <!-- سلة جانبية -->
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar-header">
+      <span>سلة التسوق</span>
+      <button class="close-cart" id="closeCart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-sidebar-footer">
+      <div class="cart-total">
+        <span>الإجمالي:</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="checkout-btn">إتمام الشراء</button>
+    </div>
+  </aside>
+  <div class="cart-sidebar-overlay" id="cartSidebarOverlay"></div>
+  <div id="cartSuccessAlert" class="cart-success-alert" style="display:none;">تمت إضافة المنتج إلى السلة!</div>
+  <!-- نافذة الدفع الوهمية -->
+  <div class="payment-modal-overlay" id="paymentModalOverlay"></div>
+  <div class="payment-modal" id="paymentModal">
+    <div class="payment-modal-content">
+      <button class="close-payment-modal" id="closePaymentModal">&times;</button>
+      <h3>إتمام الشراء</h3>
+      <form id="paymentForm">
+        <label>الاسم الكامل</label>
+        <input type="text" required>
+        <label>البريد الإلكتروني</label>
+        <input type="email" required>
+        <label>اختر وسيلة الدفع</label>
+        <select id="paymentMethod" required>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="paypal">PayPal</option>
+          <option value="applepay">Apple Pay</option>
+        </select>
+        <div id="cardFields">
+          <label>رقم البطاقة</label>
+          <input type="text" maxlength="19" pattern="[0-9 ]*">
+          <label>تاريخ الانتهاء</label>
+          <input type="text" maxlength="5" placeholder="MM/YY">
+          <label>CVV</label>
+          <input type="text" maxlength="4">
+        </div>
+        <button type="submit" class="pay-btn">ادفع الآن</button>
+      </form>
+      <div id="paymentSuccess" class="payment-success" style="display:none;">تمت العملية بنجاح! شكراً لتسوقك.</div>
+    </div>
+  </div>
+  <footer>
+    <div class="payments">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_Pay_logo.svg" alt="Apple Pay">
+    </div>
+    <div class="footer-info">
+      جميع الحقوق محفوظة &copy; GamerZone 2024
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 
